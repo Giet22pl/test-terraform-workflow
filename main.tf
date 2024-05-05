@@ -5,6 +5,6 @@ resource "local_file" "foo" {
 
 terraform {
 	backend "local" {
-		path= var.path
+		path= "/terraform.tfstate"
 		}
 		}

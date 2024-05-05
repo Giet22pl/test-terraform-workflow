@@ -1,10 +1,10 @@
 resource "local_file" "foo" {
-  content  = "print('Hello world')"
-  filename = "${path.module}/hello.py"
+  content  = var.content
+  filename = var.filename
 }
 
 terraform {
 	backend "local" {
-		path= "/terraform.tfstate"
+		path= var.path
 		}
 		}
